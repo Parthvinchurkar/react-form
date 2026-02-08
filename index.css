@@ -1,0 +1,225 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* BODY + ROOT (blank screen fix included) */
+body {
+  min-height: 100vh;
+  background: #f4f7fb;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= FORM ================= */
+
+.form-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 560px;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.form-subtitle {
+  text-align: center;
+  font-size: 13px;
+  color: #718096;
+  margin-bottom: 28px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+label {
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #2d3748;
+}
+
+input,
+select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #dfe3ea;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s, background 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #667eea;
+}
+
+/* Phone row */
+.phone-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+/* Password */
+.password-wrapper {
+  position: relative;
+}
+
+.toggle {
+  position: absolute;
+  right: 10px;
+  top: 34px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Soft error (NO harsh red) */
+.soft-error {
+  border-color: #f6ad55;
+  background: #fffaf0;
+}
+
+/* Password error message */
+.password-error {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #c05621;
+  background: #fffaf0;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #667eea;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+}
+
+/* ================= SUCCESS ================= */
+
+.success-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 560px;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.success-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.success-header h2 {
+  color: #2f855a;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.success-header p {
+  font-size: 13px;
+  color: #718096;
+}
+
+.success-list {
+  margin-top: 20px;
+}
+
+.success-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.success-item span:first-child {
+  font-weight: 600;
+  color: #4a5568;
+  text-transform: capitalize;
+}
+
+.success-item span:last-child {
+  color: #2d3748;
+  word-break: break-all;
+  text-align: right;
+}
+
+.success-actions {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.success-actions a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #667eea;
+  font-weight: 600;
+}
+
+.success-actions a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
